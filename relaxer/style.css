@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/276141.jpg);
+    background-repeat: none;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    font-family: cursive;
+   
+    
+}
+
+
+
+
+h1{
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+
+}
+.container{
+    display: flex;
+    margin:30vh auto;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    position: relative;
+
+
+}
+.circle{
+   background-color: rgb(4, 63, 4);
+   height:100%; 
+   width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+
+}
+.gradient{
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca493 40%,
+        #fff 40%,
+        #fff 60%,
+        #336d62 60%,
+        #2a5b52 100%
+      );;
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    z-index: -2;
+    position: absolute;
+}
+
+.pointer{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(253, 250, 250);
+    border-radius: 50%;
+    
+}
+.pointer-container{
+    
+  
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+  }
+  
+
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+    
+.container.grow {
+    animation: grow 3s linear forwards;
+  }
+
+  @keyframes grow {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  .container.shrink {
+    animation: shrink 3s linear forwards;
+  }
+  
+  @keyframes shrink {
+    from {
+      transform: scale(1.2);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  
